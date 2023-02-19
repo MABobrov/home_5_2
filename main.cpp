@@ -1,34 +1,26 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
-void mass () {
+int main() {
 	int mas[100][100];
-	int n,m;
-	
-	printf("m=");
-	scanf("%d",&m);
-	printf("n=");
-	scanf("%d",&n);
-	
-	for(int j=0;j<m;j++)
-	{
-		for(int i=0;i<n;i++)
-		{
-			scanf("%i", &mas[j][i]);
-		}
-	}
-	for(int j=0;j<n;j++)
-	{
-		for(int i=0;i<m;i++)
-		{
-			printf("%3i", &mas[j][i]);
-		}
-		printf("\n\n");
-	}
-}
+	int n, m;
+	printf("Введите количество строк: ");
+	scanf("%d", &n);
+	printf("Введите количество столбцов: ");
+	scanf("%d", &m);
 
-int main(void)
-{
-	 mass();
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			printf("Введите элемент массива [%d][%d] = ", i, j);
+			scanf("%d", &mas[i][j]);
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+		{
+			printf("%2i ", mas[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
 }
